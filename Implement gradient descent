@@ -1,0 +1,27 @@
+# Implementing Gradient Descent
+
+hours = 5
+actual_marks = 80
+
+weight = 5           # Initial guess
+learning_rate = 0.1
+
+for epoch in range(10):
+
+    # Prediction
+    predicted_marks = weight * hours
+
+    # Loss
+    loss = (actual_marks - predicted_marks) ** 2
+
+    # Derivative (Gradient)
+    gradient = -2 * hours * (actual_marks - predicted_marks)
+
+    # Update Weight
+    weight = weight - learning_rate * gradient
+
+    print(f"Epoch {epoch+1}")
+    print(f"Prediction = {predicted_marks:.2f}")
+    print(f"Loss = {loss:.2f}")
+    print(f"Weight = {weight:.2f}")
+    print("-" * 30)
