@@ -1,0 +1,20 @@
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+
+data = {
+    'Hours': [1, 2, 3, 4, 5],
+    'Result': [0, 0, 1, 1, 1]
+}
+
+df = pd.DataFrame(data)
+
+X = df[['Hours']]
+y = df['Result']
+
+model = LogisticRegression()
+model.fit(X, y)
+
+prediction = model.predict([[2.5]])
+
+print("Prediction:", prediction[0])
+#Output:Predition: 1
