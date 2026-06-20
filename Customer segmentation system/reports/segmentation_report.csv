@@ -1,0 +1,11 @@
+clusters = model.predict(X_scaled)
+
+df["Cluster"] = clusters
+
+report = df.groupby("Cluster").agg({
+    "Age":"mean",
+    "AnnualIncome":"mean",
+    "SpendingScore":"mean"
+})
+
+report.to_csv("reports/segmentation_report.csv")
