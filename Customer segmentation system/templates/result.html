@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static',filename='style.css')}}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Prediction Result</h1>
+
+<h2>{{ segment }}</h2>
+
+<p>Cluster ID : {{ cluster }}</p>
+
+<p>Age : {{ age }}</p>
+
+<p>Income : {{ income }}</p>
+
+<p>Score : {{ score }}</p>
+
+<a href="/">Try Again</a>
+
+</div>
+
+</body>
+</html>
