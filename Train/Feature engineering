@@ -1,0 +1,13 @@
+import pandas as pd
+
+df = pd.DataFrame({
+    'BirthYear':[2000,2002,2004]
+})
+
+df['Age'] = 2026 - df['BirthYear']
+
+print(df)
+#Output:BirthYear  Age
+0       2000   26
+1       2002   24
+2       2004   22
