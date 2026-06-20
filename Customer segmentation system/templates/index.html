@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Segmentation</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static',filename='style.css')}}">
+</head>
+<body>
+
+<div class="container">
+
+<h1>Customer Segmentation System</h1>
+
+<form action="/predict" method="POST">
+
+<input type="number"
+name="age"
+placeholder="Age"
+required>
+
+<input type="number"
+name="income"
+placeholder="Annual Income"
+required>
+
+<input type="number"
+name="score"
+placeholder="Spending Score"
+required>
+
+<button type="submit">
+Predict Segment
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
